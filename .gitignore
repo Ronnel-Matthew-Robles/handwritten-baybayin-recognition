@@ -1,0 +1,8 @@
+# dataset
+*.npy
+
+# models
+models/
+Experimentation/
+logs/
+csv/

@@ -1,0 +1,924 @@
+digraph g {
+	graph [nodesep=1 ranksep=2 splines=false]
+	edge [arrowhead=none color="#707070"]
+	subgraph cluster_input {
+		node [fillcolor="black:white" fontcolor=white shape=square style=filled]
+		color=white label="CNN - Model 1 — Simple Architecture
+
+
+
+Input Layer"
+		1 [label="Image
+ 75 x 75 pixels
+Grayscale" fontcolor=white]
+	}
+	conv_2 -> 2
+	1 -> conv_2
+	subgraph cluster_1 {
+		color="#5faad0" style=filled
+		conv_2 [label="Convolutional Layer
+Kernel Size: 3x3
+Filters: 32" shape=square]
+		2 [label="32
+Feature Maps" shape=square]
+	}
+	2 -> 3
+	subgraph cluster_2 {
+		color=white
+		3 [label="Max Pooling
+Pool Size: 2x2" fillcolor="#8e44ad" fontcolor=white style=filled]
+	}
+	3 -> 4
+	subgraph cluster_3 {
+		color=white
+		4 [label="Dropout Layer" fillcolor="#f39c12" fontcolor=white style=filled]
+	}
+	conv_5 -> 5
+	4 -> conv_5
+	subgraph cluster_4 {
+		color="#5faad0" style=filled
+		conv_5 [label="Convolutional Layer
+Kernel Size: 3x3
+Filters: 64" shape=square]
+		5 [label="64
+Feature Maps" shape=square]
+	}
+	5 -> 6
+	subgraph cluster_5 {
+		color=white
+		6 [label="Max Pooling
+Pool Size: 2x2" fillcolor="#8e44ad" fontcolor=white style=filled]
+	}
+	6 -> 7
+	subgraph cluster_6 {
+		color=white
+		7 [label="Dropout Layer" fillcolor="#f39c12" fontcolor=white style=filled]
+	}
+	conv_8 -> 8
+	7 -> conv_8
+	subgraph cluster_7 {
+		color="#5faad0" style=filled
+		conv_8 [label="Convolutional Layer
+Kernel Size: 3x3
+Filters: 128" shape=square]
+		8 [label="128
+Feature Maps" shape=square]
+	}
+	8 -> 9
+	subgraph cluster_8 {
+		color=white
+		9 [label="Max Pooling
+Pool Size: 2x2" fillcolor="#8e44ad" fontcolor=white style=filled]
+	}
+	9 -> 10
+	subgraph cluster_9 {
+		color=white
+		10 [label="Dropout Layer" fillcolor="#f39c12" fontcolor=white style=filled]
+	}
+	10 -> 11
+	subgraph cluster_10 {
+		color=white
+		11 [label=Flattening fillcolor="#2c3e50" fontcolor=white shape=invtriangle style=filled]
+	}
+	11 -> 12
+	11 -> 13
+	11 -> 14
+	11 -> 15
+	11 -> 16
+	11 -> 17
+	11 -> 18
+	11 -> 19
+	11 -> 20
+	11 -> 21
+	subgraph cluster_11 {
+		color=white
+		rank=same
+		label=" (+246)" labeljust=right labelloc=b
+		12 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		13 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		14 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		15 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		16 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		17 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		18 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		19 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		20 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		21 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+	}
+	12 -> 22
+	13 -> 22
+	14 -> 22
+	15 -> 22
+	16 -> 22
+	17 -> 22
+	18 -> 22
+	19 -> 22
+	20 -> 22
+	21 -> 22
+	12 -> 23
+	13 -> 23
+	14 -> 23
+	15 -> 23
+	16 -> 23
+	17 -> 23
+	18 -> 23
+	19 -> 23
+	20 -> 23
+	21 -> 23
+	12 -> 24
+	13 -> 24
+	14 -> 24
+	15 -> 24
+	16 -> 24
+	17 -> 24
+	18 -> 24
+	19 -> 24
+	20 -> 24
+	21 -> 24
+	12 -> 25
+	13 -> 25
+	14 -> 25
+	15 -> 25
+	16 -> 25
+	17 -> 25
+	18 -> 25
+	19 -> 25
+	20 -> 25
+	21 -> 25
+	12 -> 26
+	13 -> 26
+	14 -> 26
+	15 -> 26
+	16 -> 26
+	17 -> 26
+	18 -> 26
+	19 -> 26
+	20 -> 26
+	21 -> 26
+	12 -> 27
+	13 -> 27
+	14 -> 27
+	15 -> 27
+	16 -> 27
+	17 -> 27
+	18 -> 27
+	19 -> 27
+	20 -> 27
+	21 -> 27
+	12 -> 28
+	13 -> 28
+	14 -> 28
+	15 -> 28
+	16 -> 28
+	17 -> 28
+	18 -> 28
+	19 -> 28
+	20 -> 28
+	21 -> 28
+	12 -> 29
+	13 -> 29
+	14 -> 29
+	15 -> 29
+	16 -> 29
+	17 -> 29
+	18 -> 29
+	19 -> 29
+	20 -> 29
+	21 -> 29
+	12 -> 30
+	13 -> 30
+	14 -> 30
+	15 -> 30
+	16 -> 30
+	17 -> 30
+	18 -> 30
+	19 -> 30
+	20 -> 30
+	21 -> 30
+	12 -> 31
+	13 -> 31
+	14 -> 31
+	15 -> 31
+	16 -> 31
+	17 -> 31
+	18 -> 31
+	19 -> 31
+	20 -> 31
+	21 -> 31
+	subgraph cluster_12 {
+		color=white
+		rank=same
+		label=" (+246)" labeljust=right labelloc=b
+		22 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		23 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		24 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		25 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		26 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		27 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		28 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		29 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		30 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		31 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+	}
+	22 -> 32
+	23 -> 32
+	24 -> 32
+	25 -> 32
+	26 -> 32
+	27 -> 32
+	28 -> 32
+	29 -> 32
+	30 -> 32
+	31 -> 32
+	22 -> 33
+	23 -> 33
+	24 -> 33
+	25 -> 33
+	26 -> 33
+	27 -> 33
+	28 -> 33
+	29 -> 33
+	30 -> 33
+	31 -> 33
+	22 -> 34
+	23 -> 34
+	24 -> 34
+	25 -> 34
+	26 -> 34
+	27 -> 34
+	28 -> 34
+	29 -> 34
+	30 -> 34
+	31 -> 34
+	22 -> 35
+	23 -> 35
+	24 -> 35
+	25 -> 35
+	26 -> 35
+	27 -> 35
+	28 -> 35
+	29 -> 35
+	30 -> 35
+	31 -> 35
+	22 -> 36
+	23 -> 36
+	24 -> 36
+	25 -> 36
+	26 -> 36
+	27 -> 36
+	28 -> 36
+	29 -> 36
+	30 -> 36
+	31 -> 36
+	22 -> 37
+	23 -> 37
+	24 -> 37
+	25 -> 37
+	26 -> 37
+	27 -> 37
+	28 -> 37
+	29 -> 37
+	30 -> 37
+	31 -> 37
+	22 -> 38
+	23 -> 38
+	24 -> 38
+	25 -> 38
+	26 -> 38
+	27 -> 38
+	28 -> 38
+	29 -> 38
+	30 -> 38
+	31 -> 38
+	22 -> 39
+	23 -> 39
+	24 -> 39
+	25 -> 39
+	26 -> 39
+	27 -> 39
+	28 -> 39
+	29 -> 39
+	30 -> 39
+	31 -> 39
+	22 -> 40
+	23 -> 40
+	24 -> 40
+	25 -> 40
+	26 -> 40
+	27 -> 40
+	28 -> 40
+	29 -> 40
+	30 -> 40
+	31 -> 40
+	22 -> 41
+	23 -> 41
+	24 -> 41
+	25 -> 41
+	26 -> 41
+	27 -> 41
+	28 -> 41
+	29 -> 41
+	30 -> 41
+	31 -> 41
+	22 -> 42
+	23 -> 42
+	24 -> 42
+	25 -> 42
+	26 -> 42
+	27 -> 42
+	28 -> 42
+	29 -> 42
+	30 -> 42
+	31 -> 42
+	22 -> 43
+	23 -> 43
+	24 -> 43
+	25 -> 43
+	26 -> 43
+	27 -> 43
+	28 -> 43
+	29 -> 43
+	30 -> 43
+	31 -> 43
+	22 -> 44
+	23 -> 44
+	24 -> 44
+	25 -> 44
+	26 -> 44
+	27 -> 44
+	28 -> 44
+	29 -> 44
+	30 -> 44
+	31 -> 44
+	22 -> 45
+	23 -> 45
+	24 -> 45
+	25 -> 45
+	26 -> 45
+	27 -> 45
+	28 -> 45
+	29 -> 45
+	30 -> 45
+	31 -> 45
+	22 -> 46
+	23 -> 46
+	24 -> 46
+	25 -> 46
+	26 -> 46
+	27 -> 46
+	28 -> 46
+	29 -> 46
+	30 -> 46
+	31 -> 46
+	22 -> 47
+	23 -> 47
+	24 -> 47
+	25 -> 47
+	26 -> 47
+	27 -> 47
+	28 -> 47
+	29 -> 47
+	30 -> 47
+	31 -> 47
+	22 -> 48
+	23 -> 48
+	24 -> 48
+	25 -> 48
+	26 -> 48
+	27 -> 48
+	28 -> 48
+	29 -> 48
+	30 -> 48
+	31 -> 48
+	22 -> 49
+	23 -> 49
+	24 -> 49
+	25 -> 49
+	26 -> 49
+	27 -> 49
+	28 -> 49
+	29 -> 49
+	30 -> 49
+	31 -> 49
+	22 -> 50
+	23 -> 50
+	24 -> 50
+	25 -> 50
+	26 -> 50
+	27 -> 50
+	28 -> 50
+	29 -> 50
+	30 -> 50
+	31 -> 50
+	22 -> 51
+	23 -> 51
+	24 -> 51
+	25 -> 51
+	26 -> 51
+	27 -> 51
+	28 -> 51
+	29 -> 51
+	30 -> 51
+	31 -> 51
+	22 -> 52
+	23 -> 52
+	24 -> 52
+	25 -> 52
+	26 -> 52
+	27 -> 52
+	28 -> 52
+	29 -> 52
+	30 -> 52
+	31 -> 52
+	22 -> 53
+	23 -> 53
+	24 -> 53
+	25 -> 53
+	26 -> 53
+	27 -> 53
+	28 -> 53
+	29 -> 53
+	30 -> 53
+	31 -> 53
+	22 -> 54
+	23 -> 54
+	24 -> 54
+	25 -> 54
+	26 -> 54
+	27 -> 54
+	28 -> 54
+	29 -> 54
+	30 -> 54
+	31 -> 54
+	22 -> 55
+	23 -> 55
+	24 -> 55
+	25 -> 55
+	26 -> 55
+	27 -> 55
+	28 -> 55
+	29 -> 55
+	30 -> 55
+	31 -> 55
+	22 -> 56
+	23 -> 56
+	24 -> 56
+	25 -> 56
+	26 -> 56
+	27 -> 56
+	28 -> 56
+	29 -> 56
+	30 -> 56
+	31 -> 56
+	22 -> 57
+	23 -> 57
+	24 -> 57
+	25 -> 57
+	26 -> 57
+	27 -> 57
+	28 -> 57
+	29 -> 57
+	30 -> 57
+	31 -> 57
+	22 -> 58
+	23 -> 58
+	24 -> 58
+	25 -> 58
+	26 -> 58
+	27 -> 58
+	28 -> 58
+	29 -> 58
+	30 -> 58
+	31 -> 58
+	22 -> 59
+	23 -> 59
+	24 -> 59
+	25 -> 59
+	26 -> 59
+	27 -> 59
+	28 -> 59
+	29 -> 59
+	30 -> 59
+	31 -> 59
+	22 -> 60
+	23 -> 60
+	24 -> 60
+	25 -> 60
+	26 -> 60
+	27 -> 60
+	28 -> 60
+	29 -> 60
+	30 -> 60
+	31 -> 60
+	22 -> 61
+	23 -> 61
+	24 -> 61
+	25 -> 61
+	26 -> 61
+	27 -> 61
+	28 -> 61
+	29 -> 61
+	30 -> 61
+	31 -> 61
+	22 -> 62
+	23 -> 62
+	24 -> 62
+	25 -> 62
+	26 -> 62
+	27 -> 62
+	28 -> 62
+	29 -> 62
+	30 -> 62
+	31 -> 62
+	22 -> 63
+	23 -> 63
+	24 -> 63
+	25 -> 63
+	26 -> 63
+	27 -> 63
+	28 -> 63
+	29 -> 63
+	30 -> 63
+	31 -> 63
+	22 -> 64
+	23 -> 64
+	24 -> 64
+	25 -> 64
+	26 -> 64
+	27 -> 64
+	28 -> 64
+	29 -> 64
+	30 -> 64
+	31 -> 64
+	22 -> 65
+	23 -> 65
+	24 -> 65
+	25 -> 65
+	26 -> 65
+	27 -> 65
+	28 -> 65
+	29 -> 65
+	30 -> 65
+	31 -> 65
+	22 -> 66
+	23 -> 66
+	24 -> 66
+	25 -> 66
+	26 -> 66
+	27 -> 66
+	28 -> 66
+	29 -> 66
+	30 -> 66
+	31 -> 66
+	22 -> 67
+	23 -> 67
+	24 -> 67
+	25 -> 67
+	26 -> 67
+	27 -> 67
+	28 -> 67
+	29 -> 67
+	30 -> 67
+	31 -> 67
+	22 -> 68
+	23 -> 68
+	24 -> 68
+	25 -> 68
+	26 -> 68
+	27 -> 68
+	28 -> 68
+	29 -> 68
+	30 -> 68
+	31 -> 68
+	22 -> 69
+	23 -> 69
+	24 -> 69
+	25 -> 69
+	26 -> 69
+	27 -> 69
+	28 -> 69
+	29 -> 69
+	30 -> 69
+	31 -> 69
+	22 -> 70
+	23 -> 70
+	24 -> 70
+	25 -> 70
+	26 -> 70
+	27 -> 70
+	28 -> 70
+	29 -> 70
+	30 -> 70
+	31 -> 70
+	22 -> 71
+	23 -> 71
+	24 -> 71
+	25 -> 71
+	26 -> 71
+	27 -> 71
+	28 -> 71
+	29 -> 71
+	30 -> 71
+	31 -> 71
+	22 -> 72
+	23 -> 72
+	24 -> 72
+	25 -> 72
+	26 -> 72
+	27 -> 72
+	28 -> 72
+	29 -> 72
+	30 -> 72
+	31 -> 72
+	22 -> 73
+	23 -> 73
+	24 -> 73
+	25 -> 73
+	26 -> 73
+	27 -> 73
+	28 -> 73
+	29 -> 73
+	30 -> 73
+	31 -> 73
+	22 -> 74
+	23 -> 74
+	24 -> 74
+	25 -> 74
+	26 -> 74
+	27 -> 74
+	28 -> 74
+	29 -> 74
+	30 -> 74
+	31 -> 74
+	22 -> 75
+	23 -> 75
+	24 -> 75
+	25 -> 75
+	26 -> 75
+	27 -> 75
+	28 -> 75
+	29 -> 75
+	30 -> 75
+	31 -> 75
+	22 -> 76
+	23 -> 76
+	24 -> 76
+	25 -> 76
+	26 -> 76
+	27 -> 76
+	28 -> 76
+	29 -> 76
+	30 -> 76
+	31 -> 76
+	22 -> 77
+	23 -> 77
+	24 -> 77
+	25 -> 77
+	26 -> 77
+	27 -> 77
+	28 -> 77
+	29 -> 77
+	30 -> 77
+	31 -> 77
+	22 -> 78
+	23 -> 78
+	24 -> 78
+	25 -> 78
+	26 -> 78
+	27 -> 78
+	28 -> 78
+	29 -> 78
+	30 -> 78
+	31 -> 78
+	22 -> 79
+	23 -> 79
+	24 -> 79
+	25 -> 79
+	26 -> 79
+	27 -> 79
+	28 -> 79
+	29 -> 79
+	30 -> 79
+	31 -> 79
+	22 -> 80
+	23 -> 80
+	24 -> 80
+	25 -> 80
+	26 -> 80
+	27 -> 80
+	28 -> 80
+	29 -> 80
+	30 -> 80
+	31 -> 80
+	22 -> 81
+	23 -> 81
+	24 -> 81
+	25 -> 81
+	26 -> 81
+	27 -> 81
+	28 -> 81
+	29 -> 81
+	30 -> 81
+	31 -> 81
+	22 -> 82
+	23 -> 82
+	24 -> 82
+	25 -> 82
+	26 -> 82
+	27 -> 82
+	28 -> 82
+	29 -> 82
+	30 -> 82
+	31 -> 82
+	22 -> 83
+	23 -> 83
+	24 -> 83
+	25 -> 83
+	26 -> 83
+	27 -> 83
+	28 -> 83
+	29 -> 83
+	30 -> 83
+	31 -> 83
+	22 -> 84
+	23 -> 84
+	24 -> 84
+	25 -> 84
+	26 -> 84
+	27 -> 84
+	28 -> 84
+	29 -> 84
+	30 -> 84
+	31 -> 84
+	22 -> 85
+	23 -> 85
+	24 -> 85
+	25 -> 85
+	26 -> 85
+	27 -> 85
+	28 -> 85
+	29 -> 85
+	30 -> 85
+	31 -> 85
+	22 -> 86
+	23 -> 86
+	24 -> 86
+	25 -> 86
+	26 -> 86
+	27 -> 86
+	28 -> 86
+	29 -> 86
+	30 -> 86
+	31 -> 86
+	22 -> 87
+	23 -> 87
+	24 -> 87
+	25 -> 87
+	26 -> 87
+	27 -> 87
+	28 -> 87
+	29 -> 87
+	30 -> 87
+	31 -> 87
+	22 -> 88
+	23 -> 88
+	24 -> 88
+	25 -> 88
+	26 -> 88
+	27 -> 88
+	28 -> 88
+	29 -> 88
+	30 -> 88
+	31 -> 88
+	22 -> 89
+	23 -> 89
+	24 -> 89
+	25 -> 89
+	26 -> 89
+	27 -> 89
+	28 -> 89
+	29 -> 89
+	30 -> 89
+	31 -> 89
+	22 -> 90
+	23 -> 90
+	24 -> 90
+	25 -> 90
+	26 -> 90
+	27 -> 90
+	28 -> 90
+	29 -> 90
+	30 -> 90
+	31 -> 90
+	22 -> 91
+	23 -> 91
+	24 -> 91
+	25 -> 91
+	26 -> 91
+	27 -> 91
+	28 -> 91
+	29 -> 91
+	30 -> 91
+	31 -> 91
+	22 -> 92
+	23 -> 92
+	24 -> 92
+	25 -> 92
+	26 -> 92
+	27 -> 92
+	28 -> 92
+	29 -> 92
+	30 -> 92
+	31 -> 92
+	22 -> 93
+	23 -> 93
+	24 -> 93
+	25 -> 93
+	26 -> 93
+	27 -> 93
+	28 -> 93
+	29 -> 93
+	30 -> 93
+	31 -> 93
+	22 -> 94
+	23 -> 94
+	24 -> 94
+	25 -> 94
+	26 -> 94
+	27 -> 94
+	28 -> 94
+	29 -> 94
+	30 -> 94
+	31 -> 94
+	subgraph cluster_output {
+		node [color="#2ecc71" fontcolor="#2ecc71" shape=circle style=filled]
+		color=white
+		rank=same
+		labeljust=1
+		32 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		33 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		34 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		35 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		36 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		37 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		38 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		39 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		40 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		41 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		42 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		43 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		44 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		45 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		46 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		47 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		48 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		49 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		50 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		51 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		52 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		53 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		54 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		55 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		56 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		57 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		58 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		59 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		60 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		61 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		62 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		63 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		64 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		65 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		66 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		67 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		68 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		69 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		70 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		71 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		72 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		73 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		74 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		75 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		76 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		77 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		78 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		79 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		80 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		81 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		82 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		83 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		84 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		85 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		86 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		87 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		88 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		89 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		90 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		91 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		92 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		93 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		94 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		label="Output Layer" labelloc=bottom
+	}
+	arrowShape=none
+}
